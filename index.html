@@ -5,6 +5,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#5c0f46">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Trips</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="apple-touch-icon" href="./assets/icon.png" />
@@ -12,6 +14,7 @@
   </head>
   <body>
     <div class="bg"></div>
+    <header></header>
     <div id="container">
       <div class="circle">
         <h1 class="title">Contagem Regressiva</h1>
@@ -33,17 +36,18 @@
             <small>Segundos</small>
           </div>
         </div>
-        <p class="subtitle">para viajaaaaaaar</p>
         <div class="final-message" id="finalMessage">
         Contagem finalizada!
         HUHUUUUUL
         </div>
       </div>
       <div class="circle-img">
-        <p class="subtitle">Próxima parada: Aracaju - SE</p>
+        <p class="subtitle">Próxima parada: <br>
+          Aracaju - SE</p>
         <img src="./assets/mapa.png" alt="">
       </div>  
     </div>
+    <footer></footer>
     <script src="./script.js"></script>
   </body>
 </html>
