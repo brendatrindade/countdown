@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-desktop.svg);
+  --stroke-color: rgba(255, 255, 255, 0.08);
+  --stroke-color-hover: rgba(0, 0, 0, 0.08);
+}
+
+/*body*/
+body * {
+  color: var(--text-color);
+}
+
+body {
+  margin: 0;
+}
+
+.bg {
+  position: fixed;
+  inset: 0;
+  background-image: var(--bg-url);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+/*container*/
+#container {
+  width: 100%;
+  max-width: 1000px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 24px;
+  text-align: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.circle {
+  width: 50vw;
+  max-width: 600px;
+  min-width: 300px;
+  aspect-ratio: 1 / 1;
+  padding: 0 18px;
+  border-radius: 50%;
+  border: 2px solid #e2a9f1;
+  border-style: dotted;
+  background-color: #5c0f46;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.time-box {
+  width: 100%;
+  background: var(--stroke-color);
+  border-radius: 12px;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.time-box:hover {
+  background: var(--stroke-color-hover);
+}
+
+.time-box span {
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+}
+
+.time-box small {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.circle-img {
+  width: 50vw;
+  max-width: 600px;
+  min-width: 300px;
+  aspect-ratio: 1 / 1;
+  padding: 0 18px;
+  border-radius: 50%;
+  border: 2px solid #e2a9f1;
+  border-style: dotted;
+  background-color: #5c0f46;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+img {
+  width: 100%;
+  padding-left: 10px;
+}
+
+.circle-img:hover {
+  background-color: #52113f;
+}
+
+.final-message {
+  font-size: 20px;
+  display: none;
+  text-align: center;
+  margin-top: 10px;
+}
