@@ -1,21 +1,22 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "ToTravell",
+  "short_name": "ToTravell",
+  "start_url": "/index.html",
   "icons": [
     {
-      "src": "/public/web-app-manifest-192x192.png",
+      "src": "/assets/icons/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/public/web-app-manifest-512x512.png",
+      "src": "/assets/icons/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#620f4a",
-  "background_color": "#620f4a",
+  "theme_color": "#5c0f46",
+  "background_color": "#5c0f46",
   "display": "standalone"
 }
