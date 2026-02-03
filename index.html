@@ -4,19 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <meta name="description" content="Contagem regressiva para viajar">
     <meta name="theme-color" content="#5c0f46">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta property="og:title" content="To Travell">
+    <meta property="og:description" content="Contagem regressiva para viajar">
+    <meta property="og:image" content="https://totravell.netlify.app/assets/screenshots/view-desktop.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://totravell.netlify.app/">
+    <meta property="og:site_name" content="ToTravell">
 
     <title>ToTravell</title>
 
-    <link rel="stylesheet" href="/css/style.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
+    <link rel="canonical" href="https://totravell.netlify.app/">
     <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
     <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+
+    <link rel="preload" as="image" href="/assets/images/bg-desktop.webp" media="(min-width: 768px)" fetchpriority="high" >
+    <link rel="preload" as="image" href="/assets/images/bg-mobile.webp" media="(max-width: 768px)" fetchpriority="high" >
+
+    <style>
+      .bg {
+        position: fixed;
+        inset: 0;
+        background-image: url("/assets/images/bg-desktop.webp");
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+      }
+      @media (max-width: 768px) {
+        .bg {
+          background-image: url("/assets/images/bg-mobile.webp");
+        }
+      }      
+    </style>
+
+    <link rel="stylesheet" href="/css/style.css" />
     <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body>
@@ -51,10 +79,27 @@
       <div class="circle-img">
         <p class="subtitle">Próxima parada: <br>
           Aracaju - SE</p>
-        <img src="/assets/images/mapa.png" alt="Mapa dos estados brasileiros">
+        <img
+          src="/assets/images/mapa.webp"
+          width="500"
+          height="500"
+          alt="Mapa dos estados brasileiros"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        >
       </div>  
     </div>
     <footer></footer>
-    <script src="/js/script.js"></script>
+    <script src="/js/script.js" defer></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/sw.js");
+
+        navigator.serviceWorker.addEventListener("controllerchange", () => {
+          window.location.reload();
+        });
+      }
+    </script>
   </body>
 </html>
